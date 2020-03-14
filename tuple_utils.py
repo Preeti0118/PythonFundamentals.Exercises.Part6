@@ -14,7 +14,7 @@ def tic_tac_toe_finish(board: TicTacToeBoard, pos_y: int, pos_x: int, symbol: st
     :param symbol: The symbol that should be placed in the column (X, or O)
     :return: None
     """
-    TicTacToeBoard[pos_y-1][x-1] = symbol
+    TicTacToeBoard[pos_y-1][pos_x-1] = symbol
 
 def count_instances(collection: Tuple, instance: Union[int, str]) -> int:
     """
@@ -52,8 +52,8 @@ def print_items_with_index(items: Iterable):
     :param items: A tuple or a list
     :return: None
     """
-    for i in range(1,len(items)):
-        print(items[i-1])
+    for i in range(1,len(items)-1):
+        print(i,':',items[i])
 
 
  
